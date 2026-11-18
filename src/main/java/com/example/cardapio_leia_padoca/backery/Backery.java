@@ -2,6 +2,9 @@ package com.example.cardapio_leia_padoca.backery;
 
 import jakarta.persistence.Table;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 /**
  * Backery
@@ -18,5 +21,17 @@ import jakarta.persistence.Entity;
 @Table(name = "backerys")
 @Entity(name = "backerys")
 public class Backery {
+    /* colunas */
+
+    @Id /* Primary Key */
+    @GeneratedValue(strategy = GenerationType.IDENTITY) /* Geração automática do ID */
+    private Long id; /* ID da padaria */
+
+    private String title; /* Nome da padaria */
+
+    private String image; /* Imagens da padaria */
+
+    private String price; /* Preço da padaria */
+
 
 }
